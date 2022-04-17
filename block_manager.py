@@ -46,7 +46,7 @@ class BlockManager:
             * Remove block for active list.
         """
         for block in self.active_blocks[:]:
-            if block.distance(self.ball) <= 60:
+            if block.distance(self.ball) <= block.COLLISION_SIZE:
                 # hide turtle and remove 
                 block.hideturtle()
                 self.active_blocks.remove(block)

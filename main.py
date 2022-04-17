@@ -37,8 +37,10 @@ while True:
         scoreboard.game_over_reset(block_manager.has_game_been_won)
         block_manager.game_over_reset()
         ball.goto_starting_position()
-
-    time.sleep(ball.turtle_screen_sleep_time)
+    
     ball.update_and_draw(paddle)
     block_manager.update_and_draw()
+    
+    time.sleep(ball.turtle_screen_sleep_time)
+
     

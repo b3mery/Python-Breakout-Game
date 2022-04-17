@@ -3,6 +3,8 @@ import random
 
 class Block(Turtle):
     """Class for creating blocks, Extends Turtle"""
+    
+    COLLISION_SIZE = 60
 
     def __init__(self, pos:tuple, value:int) -> None:
         super().__init__()
@@ -17,7 +19,7 @@ class Block(Turtle):
     def __random_colour(self):
         """Generate a random RGB colour"""
         r = random.randint(0,255)
-        g =  random.randint(0,255)
-        b =  random.randint(0,255)
+        g = random.randint(0,255)
+        b = random.randint(0,255)
         self.fillcolor((r, g, b))
     
